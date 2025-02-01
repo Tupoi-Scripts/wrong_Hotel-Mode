@@ -22,15 +22,13 @@ cc.TintColor = Color3.fromRGB(243, 238, 255)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Loaded Tupoi's 'Wrong Hotel' mode!", true)
 wait(1)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("v.0.1 Good Luck!", true)
-wait(2)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Also press Shift to run.", true)
 
 local storage = game.ReplicatedStorage
 local gamestats = storage.GameStats.Total
 
 -- Spawner
 
-if gamestats.DoorsOpened.Value == 10 or 14 then
+if gamestats.DoorsOpened.Value == 10 then
 	local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
 	
 	local entity = spawner.Create({
@@ -158,7 +156,7 @@ end)
 entity:Run()
 end
 
-if gamestats.DoorsOpened.Value == 15 or 21 or 30 then
+if gamestats.DoorsOpened.Value == 21 then
 	local entity = spawner.Create({
 	Entity = {
 		Name = "Multi-Matcher",
