@@ -1,12 +1,3 @@
-local storage = game.ReplicatedStorage
-local gamestats = storage.GameStats.Total
-
--- Spawner and Achievements
-
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
-
--- Sprint
 
 local runService = game:GetService("RunService")
 
@@ -219,6 +210,13 @@ end
 
 coroutine.wrap(CJZEISY_fake_script)()
 
+local storage = game.ReplicatedStorage
+local gamestats = storage.GameStats.Total
+
+-- Spawner
+
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Entity%20Spawner/V2/Source.lua"))()
+
 -- Atmosphere
 
 local fog = Instance.new("Atmosphere")
@@ -347,6 +345,8 @@ entity:SetCallback("OnDespawning", function()
 end)
 
 entity:SetCallback("OnDespawned", function()
+    local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
     achievementGiver({
     Title = "Lucky, lucky.. But I'll still be back.",
     Desc = "Don't think it's over.",
