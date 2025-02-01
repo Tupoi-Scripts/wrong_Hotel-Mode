@@ -249,11 +249,11 @@ cc.Contrast = 0.16
 cc.TintColor = Color3.fromRGB(243, 238, 255)
 
 game.StarterGui:SetCore( "ChatMakeSystemMessage",  { Text = "Mode has been Loaded.", Color = Color3.fromRGB( 0,255,0 ), Font = nothingactually, FontSize = Enum.FontSize.Size24 } )
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.caption("Loaded Tupoi's 'Wrong Hotel' mode!", true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Loaded Tupoi's 'Wrong Hotel' mode!", true)
 wait(1)
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.caption("v.0.1 Good Luck!", true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("v.0.1 Good Luck!", true)
 wait(2)
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.caption("Also press Shift to run.", true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Also press Shift to run.", true)
 
 if gamestats.DoorsOpened.Value == 10 or 14 then
 	local entity = spawner.Create({
