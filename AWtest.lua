@@ -57,7 +57,7 @@ if workspace.CurrentRooms:FindFirstChild("51") or workspace:FindFirstChild("Seek
 return
 end
 
-		hum.Health-=3
+		hum.Health-=9
           if no == false then
 		mom:Play()
           end
