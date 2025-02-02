@@ -6,7 +6,7 @@ local enableDamage = true
 local no = false
 local damage = Instance.new("Sound")
 damage.SoundId = "rbxassetid://2104751986"
-damage.Speed = 0.82
+damage.PlaybackSpeed = 0.60
 damage.Volume = 0.55
 local DSE = Instance.new("DistortionSoundEffect")
 DSE.Name = "DSE_AlwaysW"
@@ -41,7 +41,7 @@ eyes.CFrame=(
  
 eyes.Parent=AWModel
 damage.Parent=AWModel
-local mom = {damage}
+local mom = {damage, damage, damage}
 
 if game.Players.LocalPlayer.Character.Humanoid.Health<=0 then
    no = true
@@ -57,9 +57,9 @@ if workspace.CurrentRooms:FindFirstChild("51") or workspace:FindFirstChild("Seek
 return
 end
 
-		hum.Health-=9
+		hum.Health-=10
           if no == false then
-		mom:Play()
+		mom[math.random(1, #mom)]:Play()
           end
 		if hum.Health<=0 then
 		if no == false then
@@ -69,5 +69,6 @@ end
 		end
 	end
 	end
-	task.wait(0.5)
+	task.wait(1.8)
 end
+
