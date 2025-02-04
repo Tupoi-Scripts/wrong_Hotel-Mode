@@ -1,17 +1,4 @@
 local storage = game.ReplicatedStorage
-
-if storage.GameData.LatestRoom.Value >= 1 then
-  firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Loaded!")
-  
--- Game Start
-  
-storage.GameData.LatestRoom.Changed:Wait()
-firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Tupoi's Wrong Hotel, Activated!")
-wait(3) 
-firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Currently mode script is V1")
-wait(7) 
-firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Good luck 🍀")
-
 local fog = Instance.new("Atmosphere")
 fog.Parent = game.Lighting
 fog.Name = "ScriptedFog"
@@ -54,6 +41,17 @@ sound.BulbZap.SoundId = "rbxassetid://4288784832"
 sound.BulbCharge.SoundId = "rbxassetid://166047422"
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/invisSprint.lua"))()
+
+if storage.GameData.LatestRoom.Value >= 1 then
+  firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Loaded!")
+  
+-- Game Start
+storage.GameData.LatestRoom.Changed:Wait()
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Tupoi's Wrong Hotel, Activated!")
+wait(3) 
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Currently mode script is V1")
+wait(7) 
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Good luck 🍀")
 
 -- MultiMatcher Spawn Setup
 
