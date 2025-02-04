@@ -1,4 +1,4 @@
-local storage = game.ReplicatedStorage
+local Replica_storage = game.ReplicatedStorage
 local fog = Instance.new("Atmosphere")
 fog.Parent = game.Lighting
 fog.Name = "ScriptedFog"
@@ -20,44 +20,44 @@ cc.Name = "ScriptedCC"
 cc.TintColor = Color3.fromRGB(243, 238, 255)
 local cc1 = Instance.new("ColorCorrectionEffect")
 cc1.Parent = game.Lighting
-cc1.Name = "ScriptedCC"
+cc1.Name = "ScriptedCC1"
 cc1.TintColor = Color3.fromRGB(243, 238, 255)
 local cc2 = Instance.new("ColorCorrectionEffect")
 cc2.Parent = game.Lighting
-cc2.Name = "ScriptedCC"
+cc2.Name = "ScriptedCC2"
 cc2.TintColor = Color3.fromRGB(243, 238, 255)
 local cc3 = Instance.new("ColorCorrectionEffect")
 cc3.Parent = game.Lighting
-cc3.Name = "ScriptedCC"
+cc3.Name = "ScriptedCC3"
 cc3.TintColor = Color3.fromRGB(243, 238, 255)
 local cc4 = Instance.new("ColorCorrectionEffect")
 cc4.Parent = game.Lighting
-cc4.Name = "ScriptedCC"
+cc4.Name = "ScriptedCC4"
 cc4.TintColor = Color3.fromRGB(243, 238, 255)
 
-local sound = game.ReplicatedStorage.Sounds
+local sound = Replica_storage.Sounds
 sound.BulbBreak.SoundId = "rbxassetid://2612674531"
 sound.BulbZap.SoundId = "rbxassetid://4288784832"
 sound.BulbCharge.SoundId = "rbxassetid://166047422"
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/invisSprint.lua"))()
 
-if storage.GameData.LatestRoom.Value >= 1 then
-  firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Loaded!")
-  
+if Replica_storage.GameData.LatestRoom.Value >= 1 then
+  firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Loaded!")
 -- Game Start
-storage.GameData.LatestRoom.Changed:Wait()
-firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Tupoi's Wrong Hotel, Activated!")
+if Replica_storage.GameData.LatestRoom.Changed:Wait() then
+    firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Tupoi's Wrong Hotel, Activated!")
 wait(3) 
-firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Currently mode script is V1")
+firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Currently mode script is V1")
 wait(7) 
-firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "Good luck 🍀")
+firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Good luck 🍀")
+  end
+end) 
 
 -- MultiMatcher Spawn Setup
 
-
 -- Always Watching spawn timer
-if storage.GameData.LatestRoom.Value >= 5 then
+if Replica_storage.GameData.LatestRoom.Value >= 5 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
 wait(50)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
@@ -79,3 +79,4 @@ wait(50)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
 wait(50)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
+end
