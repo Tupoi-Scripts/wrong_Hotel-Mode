@@ -53,7 +53,7 @@ firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Currently mode script 
 wait(7) 
 firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Good luck 🍀")
   end
-end) 
+end
 
 -- MultiMatcher Spawn Setup
 coroutine.wrap(function()
