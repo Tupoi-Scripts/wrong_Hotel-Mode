@@ -1,5 +1,6 @@
-print("*steals assets from IMPOSSIBLE MODE cutely UWU*")
 local Replica_storage = game.ReplicatedStorage
+
+---====== Script Setup ======---
 local fog = Instance.new("Atmosphere")
 fog.Parent = game.Lighting
 fog.Name = "ScriptedFog"
@@ -54,22 +55,45 @@ require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("
   end
 end
 
+---====== Entities ======---
+
 -- MultiMatcher Spawn Setup
 coroutine.wrap(function()
-while true do
-wait(190)
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/MultiMatcher.lua"))()
-end
-end)()
+  while true do
+    wait(190)
+    Replica_storage.GameData.LatestRoom.Changed:Wait()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/MultiMatcher.lua"))()
+  end
+  
+end)
 --
 
 -- Always Watching spawn timer
 coroutine.wrap(function()
-while true do
-wait(150)
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-end
-end)()
+  while true do
+    wait(150)
+    Replica_storage.GameData.LatestRoom.Changed:Wait()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
+  end
+  
+end)
 --
+
+-- Duster spawn setup
+coroutine.wrap(function()
+  while true do
+    wait(200)
+    Replica_storage.GameData.LatestRoom.Changed:Wait()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/Duster.lua"))
+  end
+  
+end)
+--
+
+-- The Devil's Lighting
+--
+
+-- Depth
+--
+
+---====== After Door 60 ======---
