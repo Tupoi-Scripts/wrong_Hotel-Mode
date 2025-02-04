@@ -41,8 +41,6 @@ sound.BulbBreak.SoundId = "rbxassetid://2612674531"
 sound.BulbZap.SoundId = "rbxassetid://4288784832"
 sound.BulbCharge.SoundId = "rbxassetid://166047422"
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/invisSprint.lua"))()
-
 if Replica_storage.GameData.LatestRoom.Value >= 1 then
   firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Loaded!")
 -- Game Start
