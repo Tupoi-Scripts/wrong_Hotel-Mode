@@ -1,4 +1,4 @@
-print("*steals assets cutely*") 
+print("*steals assets from IMPOSSIBLE MODE cutely UWU*")
 local Replica_storage = game.ReplicatedStorage
 local fog = Instance.new("Atmosphere")
 fog.Parent = game.Lighting
@@ -42,21 +42,22 @@ sound.BulbZap.SoundId = "rbxassetid://4288784832"
 sound.BulbCharge.SoundId = "rbxassetid://166047422"
 
 if Replica_storage.GameData.LatestRoom.Value >= 1 then
-  firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Loaded!")
+  require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Loaded!", true)
 -- Game Start
 if Replica_storage.GameData.LatestRoom.Changed:Wait() then
-    firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Tupoi's Wrong Hotel, Activated!")
-wait(3) 
-firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Currently mode script is V1")
-wait(7) 
-firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Good luck 🍀")
+  print("Model")
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Tupoi's Wrong Hotel, Activated!", true)
+wait(3)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Currently mode script is V1", true)
+wait(7)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Good luck!", true)
   end
 end
 
 -- MultiMatcher Spawn Setup
 coroutine.wrap(function()
 while true do
-wait(200)
+wait(190)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/MultiMatcher.lua"))()
 end
@@ -64,26 +65,11 @@ end)()
 --
 
 -- Always Watching spawn timer
-if Replica_storage.GameData.LatestRoom.Value >= 5 then
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(50)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(100)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(50)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(100)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(100)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(50)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(100)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(50)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(50)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
-wait(50)
+coroutine.wrap(function()
+while true do
+wait(150)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/AWScript.lua"))()
 end
+end)()
+--
