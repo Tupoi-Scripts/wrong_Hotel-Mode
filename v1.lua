@@ -1,3 +1,4 @@
+print("*steals assets cutely*") 
 local Replica_storage = game.ReplicatedStorage
 local fog = Instance.new("Atmosphere")
 fog.Parent = game.Lighting
@@ -55,6 +56,14 @@ firesignal(Replica_storage.Bricks.Caption.OnClientEvent, "Good luck 🍀")
 end) 
 
 -- MultiMatcher Spawn Setup
+coroutine.wrap(function()
+while true do
+wait(200)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tupoi-Scripts/wrong_Hotel-Mode/refs/heads/main/MultiMatcher.lua"))()
+end
+end)()
+--
 
 -- Always Watching spawn timer
 if Replica_storage.GameData.LatestRoom.Value >= 5 then
