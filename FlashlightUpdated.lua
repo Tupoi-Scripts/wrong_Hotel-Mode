@@ -6,12 +6,13 @@ function Light()
     if playerLight then
         playerLight:Destroy()
     else
-        light = Instance.new("SurfaceLight",playerChar:FindFirstChild("Head"))
+        light = Instance.new("SpotLight",playerChar:FindFirstChild("Head"))
         light.Name = "Light"
         light.Range = 25 -- Change to distance ofthe Light.
         light.Brightness = 3.7 -- Change to how much.
         light.Shadows = true -- Change it to True/False.
-	light.
+	light.Color = Color3.fromRGB(222, 228, 255)
+	light.Angle = 60
 
 		
 		local play = Instance.new("Sound",playerChar:FindFirstChild("Head"))
