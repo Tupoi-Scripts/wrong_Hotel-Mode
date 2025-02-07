@@ -8,9 +8,10 @@ function Light()
     else
         light = Instance.new("SurfaceLight",playerChar:FindFirstChild("Head"))
         light.Name = "Light"
-        light.Range = 15 -- Change to distance ofthe Light.
-        light.Brightness = 3 -- Change to how much.
+        light.Range = 25 -- Change to distance ofthe Light.
+        light.Brightness = 3.7 -- Change to how much.
         light.Shadows = true -- Change it to True/False.
+	light.
 
 		
 		local play = Instance.new("Sound",playerChar:FindFirstChild("Head"))
